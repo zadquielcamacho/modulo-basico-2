@@ -1,6 +1,5 @@
 ---
 mode: 'agent'
-model: GPT-5.6 Luna
 description: 'Configure MongoDB and seed octofit_db for the Octofit multi-tier application'
 ---
 
