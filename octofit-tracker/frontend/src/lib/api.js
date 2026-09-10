@@ -13,9 +13,10 @@ export const responseItems = (payload) => {
   return [];
 };
 
-export async function fetchResource(resource) {
-  const response = await fetch(apiUrl(resource));
-  if (!response.ok) throw new Error(`No se pudo cargar ${resource} (${response.status})`);
+export async function fetchResource(resourceOrUrl) {
+  const endpoint = resourceOrUrl.startsWith('http') ? resourceOrUrl : apiUrl(resourceOrUrl);
+  const response = await fetch(endpoint);
+  if (!response.ok) throw new Error(`No se pudo cargar ${resourceOrUrl} (${response.status})`);
   return responseItems(await response.json());
 }
 
