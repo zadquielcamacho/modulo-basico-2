@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-model: GPT-5.5
+model: GPT-5.6 Luna
 description: 'Create the Node.js logic tier for the Octofit multi-tier application'
 ---
 
